@@ -1,0 +1,42 @@
+Drop Table IF Exists stuff; 
+
+Create Table stuff (
+	name VARCHAR,
+	image VARCHAR,
+	class VARCHAR,
+	subclass VARCHAR,
+	tags VARCHAR,
+	durability INT,
+	strength INT,
+	range INT,
+	arrows INT,
+	defense INT,
+	defense_upgrade_lvl1 INT,
+	defense_upgrade_lvl2 INT,
+	defense_upgrade_lvl3 INT,
+	defense_upgrade_lvl4 INT,
+	bonus VARCHAR,
+	description VARCHAR,
+	selling_price  INT,
+	bonus_set VARCHAR,
+	upgrade_1 VARCHAR,
+	upgrade_2 VARCHAR,
+	upgrade_3 VARCHAR,
+	upgrade_4 VARCHAR,
+	armor_upgrade VARCHAR,
+	where_to_find VARCHAR,
+	notes VARCHAR
+); 
+
+Select * from stuff ;
+
+Select 
+	name, 
+	class,
+	subclass,
+	durability, 
+	strength, 
+	range as arrows_per_shot, 
+	description
+From stuff
+Where class = 'Bow' ; 

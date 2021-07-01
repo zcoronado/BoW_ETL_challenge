@@ -1,0 +1,48 @@
+Drop Table IF Exists material; 
+
+Create Table material (
+	name VARCHAR, 
+	image VARCHAR,
+	class VARCHAR,
+	subclass VARCHAR,
+	tags VARCHAR,
+	description VARCHAR,
+	hp FLOAT,
+	hp_backed FLOAT,
+	hp_cooked FLOAT, 
+	effect_cooked VARCHAR,
+	quality_lvl INT, 
+	potential Float,
+	duration_bonus_cooked VARCHAR ,
+	selling_price INT, 
+	selling_mon INT, 
+	dye_color VARCHAR,
+	food_recipe VARCHAR,
+	armor_upgrade VARCHAR,
+	compendium_id VARCHAR,
+	notes VARCHAR,
+	buying_price VARCHAR,
+	shop VARCHAR
+
+
+); 
+
+Select * from material ;
+
+Select 
+	name, 
+	class, 
+	subclass, 
+	description, 
+	hp, 
+	hp_backed, 
+	hp_cooked, 
+	effect_cooked, 
+	duration_bonus_cooked, 
+	selling_price, 
+	food_recipe
+from material 
+where class = 'Material'; 
+	
+	
+	

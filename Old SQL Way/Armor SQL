@@ -39,7 +39,7 @@ Select
 	defense_upgrade_lvl2, 
 	defense_upgrade_lvl3, 
 	defense_upgrade_lvl4, 
-	description
+	description,
 	selling_price, 
 	bonus_set, 
 	upgrade_1, 

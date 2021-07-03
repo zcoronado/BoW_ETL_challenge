@@ -109,7 +109,8 @@ From material
 Where food_recipe is null ;
 -- null values in food_recipe
 
--- replace null values with empty cells
+-- -- creating new table that replaced null values with empty cells
+CREATE TABLE material1 AS 
 Select 
 	name, 
 	class,
@@ -123,3 +124,6 @@ Select
 	COALESCE(CAST(selling_price as VARCHAR(20)),'') as selling_price,
 	COALESCE(food_recipe,'') as food_recipe
 From material ; 
+
+Select * from material1 ; 
+-- confirmed new material table is clean

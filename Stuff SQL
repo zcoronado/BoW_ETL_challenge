@@ -57,7 +57,7 @@ Select * From weapon;
 Drop Table weapon ; 
 
 -- -- creating new table that replaced null values with empty cells
-CREATE TABLE weapon AS
+CREATE TABLE weapon1 AS
 Select 
 	name, 
 	class, 
@@ -68,7 +68,7 @@ Select
 From stuff
 Where class = 'Weapon' ;
 
-Select * From weapon;
+Select * From weapon1;
 -- confirmed new weapon table is clean 
 
 -- create new tables based on shield class
@@ -85,6 +85,11 @@ Where Class = 'Shield' ;
 -- spot checking columns for nulls 
 Select * From shield; 
 -- no null values in shield table 
+
+-- rename shield table to match the other version 1 names in database 
+Alter Table shield 
+Rename To shield1 ; 
+
 
 
 -- create new tables based on bow class
@@ -107,7 +112,7 @@ Select * From bow ;
 Drop Table bow ; 
 
 -- creating new table that replaced null values with empty cells
-CREATE TABLE bow AS 
+CREATE TABLE bow1 AS 
 Select
 	name, 
 	class,
@@ -119,5 +124,5 @@ Select
 From stuff
 Where class = 'Bow' ; 
 
-Select * From bow;
+Select * From bow1;
 -- confirmed new bow table is clean 

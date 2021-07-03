@@ -65,16 +65,18 @@ From food
 Where effect is null ; 
 -- null values in effect 
 
--- replace null values with empty cells
+-- -- creating new table that replaced null values with empty cells
+CREATE TABLE food1 AS
 Select
 	name,
 	class,
 	subclass,
-	COALESCE(description ,'') as effect, 
+	COALESCE(description ,'') as description, 
 	ingredients,
 	COALESCE(CAST(hp as VARCHAR(20)),'') as hp, 
 	COALESCE(effect,'') as effect
 From 
 	food ;
-	
--- table cleaned 
+
+Select * from food1 ; 
+-- confirmed new food table is cleand 

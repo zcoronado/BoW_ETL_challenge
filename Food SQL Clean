@@ -3,20 +3,20 @@ Drop Table IF Exists food;
 
 -- create new table while determining data types 
 Create Table food (
-	name varchar,
-	image varchar,
-	class varchar,
-	subclass varchar,
-	description varchar,
-	ingredients varchar, 
-	hp float, 
-	effect varchar
+	name VARCHAR,
+	image VARCHAR,
+	class VARCHAR,
+	subclass VARCHAR,
+	description VARCHAR,
+	ingredients VARCHAR, 
+	hp FLOAT, 
+	effect VARCHAR
 ); 
 
 -- check table was created successfully 
 Select * From food ; 
 
-upload csv files into table 
+--upload csv files into table 
 
 -- check information was uploaded successfully 
 Select * From food ; 
@@ -29,6 +29,7 @@ Drop Column image ;
 Select * From food ; 
  
 --  check columns for nulls
+
 Select * 
 From food
 Where name is null ; 
